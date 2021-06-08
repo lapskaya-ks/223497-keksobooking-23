@@ -1,7 +1,8 @@
 function getRandom (min, max) {
 
   if (min < 0 || max < 0 || min >= max) {
-    return 'Появится какая-нибудь ошибка';
+    console.log('Задан неверный диапазон! ');
+    return ('Нужно указать другое число');
   }
 
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -10,8 +11,9 @@ function getRandom (min, max) {
 getRandom (5, 90);
 
 function getArbitrary (min, max, maxSymbol = 0) {
+  console.log ('Задан неверный диапазон!');
   if (min < 0 || max < 0 || min >= max) {
-    return ('Задан неверный диапазон! Нужно указать другое число');
+    return ('Нужно указать другое число');
   }
 
   const countNumber = 10 ** maxSymbol;
